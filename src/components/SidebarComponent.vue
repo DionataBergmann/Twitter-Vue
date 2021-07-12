@@ -18,7 +18,7 @@
           
           <nav class="mb-3">
             <b-nav vertical>
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand" to="/pag1">
               <b-icon icon="house-door"></b-icon>
               Página Inicial
               </router-link>
@@ -51,7 +51,11 @@
               
             </b-nav>
           </nav>
-          <b-button id="botao" variant="primary" block @click="hide">Twettar</b-button>
+          <b-button id="botao" variant="primary" block @click="hide">
+            <router-link id="nav" class="navbar-brand"  to="/feed">
+              Twettar
+              </router-link>
+          </b-button>
         </div>
       </template>
     

@@ -7,7 +7,10 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item href="#">Fórum</b-nav-item>
+         <router-link id="nav" class="navbar-brand" to="/pag1">
+              <b-icon icon="house-door"></b-icon>
+              Página Inicial
+              </router-link>
         
       </b-navbar-nav>
 

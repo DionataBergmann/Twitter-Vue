@@ -16,6 +16,17 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="users_id"></label>
+            <input
+              type="text"
+              id="users_id"
+              class="form-control"
+              v-model="publi.users_id"
+              ref="users_id"
+              required
+            />
+          </div>
         </div>
       </div>
       
@@ -35,9 +46,8 @@ export default {
     return {
       publi: {
         audio:null,
-        users_id: null,
-        
-        
+        users_id:null
+
       },
       
       erros: [],

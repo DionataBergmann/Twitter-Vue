@@ -7,40 +7,47 @@
           
           <nav class="mb-3">
             <b-nav vertical>
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand" to="/pag1">
               <b-icon icon="house-door"></b-icon>
               Página Inicial
               </router-link>
+
+              <b-nav-item href="" @click="hide">Pag1</b-nav-item>
       
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand" to="/pag1">
               <b-icon icon="hash"></b-icon>
               Explorar
               </router-link>
 
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand" to="/pag1">
                <b-icon icon="bell"></b-icon>
               Notificações
               </router-link>
 
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
-               <b-icon icon="envelope"></b-icon>
+              <router-link id="nav" class="navbar-brand" to="/pag1">
+               <button to="/pag1"><b-icon icon="envelope"></b-icon></button>
               Mensagens
               </router-link>
 
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand" to="/pag1">
                <b-icon icon="person"></b-icon>
               Perfil
               </router-link>
 
-              <router-link id="nav" class="navbar-brand" to="/pesquisa">
+              <router-link id="nav" class="navbar-brand"  to="/pag1">
                <b-icon icon="three-dots"></b-icon>
               Mais
               </router-link>
-         
+            
+           
+
               
             </b-nav>
           </nav>
-          <b-button id="botao" variant="primary" block @click="hide">Twettar</b-button>
+          <router-link id="botao" class="navbar-brand"  to="/pag1">
+               <b-icon icon="three-dots"></b-icon>
+             Twettar
+              </router-link>
         </div>
       </template>
     

@@ -42,7 +42,7 @@ export default {
              } else {
                localStorage.setItem("token", response.data.token)
                this.$parent.mudaUser(response.data.username)               
-               this.$router.push("/pag1")
+               this.$router.push("/feed")
              }
            })
     }
