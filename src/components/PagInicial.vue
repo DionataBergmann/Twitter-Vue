@@ -46,8 +46,9 @@
               class="card-body"
               >
               
-                <h2 id="cartao" style="text-align: center"> <img src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/a/r/ar-3.jpg" alt="avatar" id="avatar">{{ publi.username }}</h2>
+                <h2 id="nome"> <img src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/a/r/ar-3.jpg" alt="avatar" id="avatar">{{ publi.username }} @{{ publi.username }}</h2>
                 <div style="text-align: left">
+                  
               </div>
               </div>
             
@@ -114,6 +115,10 @@ export default {
 
 <style scoped>
 
+#nome{
+  width: 1250px;
+  margin-bottom: 0px;
+}
 #avatar{
   border-radius: 20px !important;
   width: 40px;
@@ -121,6 +126,7 @@ export default {
 }
 
 img{
+  margin-top: 0px;
   max-height: 500px;
   max-width: 500px;
 }
@@ -129,6 +135,7 @@ img{
   align-self: center;
   align-items: center;
   text-align: center;
+ 
    /* border-right: 1px solid gray;
   border-left: 1px solid gray; */
  
@@ -144,6 +151,7 @@ img{
   margin-top: 5px;
 }
 #publicar{
+  margin-top: 0px;
   max-width: 500px;
   border-right: 1px solid gray;
   border-left: 1px solid gray;

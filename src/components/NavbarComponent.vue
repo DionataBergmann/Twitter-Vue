@@ -32,6 +32,7 @@
         </a>
         <div class="dropdown-menu">
           <router-link class="dropdown-item" to="/login">Login</router-link>
+          <router-link class="dropdown-item" to="/register">Sign Up</router-link>
           <a class="dropdown-item" href="#" @click="sair">Logout</a>
         </div>
       </li>

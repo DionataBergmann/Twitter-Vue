@@ -52,7 +52,7 @@
             </b-nav>
           </nav>
           <b-button id="botao" variant="primary" block @click="hide">
-            <router-link id="nav" class="navbar-brand"  to="/feed">
+            <router-link id="nav" class="navbar-brand"  to="/pag1">
               Twettar
               </router-link>
           </b-button>
