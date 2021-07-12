@@ -16,6 +16,9 @@
            v-model="password">
     <label for="inputPassword">Senha de Acesso</label>
   </div>
+  <p style="text-align: center">
+      Ou crie sua <router-link to="/register">conta</router-link>.
+    </p>
 
   <button id="botao" class="btn btn-lg btn-secondary btn-block" type="submit">Entrar</button>
 </form>    
