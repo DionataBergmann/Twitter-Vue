@@ -1,35 +1,74 @@
 <template>
+
   <div class="container-fluid">
-        <h1  id='title'>Twitter
+        <div id="publicar" class="container">
+    <form @submit.prevent="inclui">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="audio"></label>
+            <input
+              type="text"
+              id="audio"
+              class="form-control"
+              v-model="publi.audio"
+              ref="audio"
+              placeholder="audio"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="users_id"></label>
+            <input
+              type="text"
+              id="users_id"
+              class="form-control"
+              v-model="publi.users_id"
+              ref="users_id"
+              placeholder="user_id"
+              required
+            />
+          </div>
+        </div>
+      </div>
       
-      </h1>
-    <div class="row m-4">
-        <div class="container-fluid">
-           <h1>O que está acontecend</h1>
-          <p> testando</p>
-         </div>
-      <div class="col-md-3" v-for="publi in publis" :key="publi.id">
-        <div id='card-body'>
-          <div class="card mb-4 shadow-lg" style="margin-left: 60px">
+
+      <button id="botao" type="submit" variant="primary">
+        <i></i> Twettar
+      </button>
+      
+    </form>
+  </div>
+    <!-- <div  id="cartao" class="card"> -->
+      <div id="cartao">
+       <div  id="cartao" v-for="publi in publis" :key="publi.id">
+          <div 
+              class="card-body"
+              >
+              
+                <h2 id="cartao" style="text-align: center"> <img src="https://www.livrariasfamiliacrista.com.br/media/catalog/product/cache/1/image/800x/56819907b1c49a4bc751319b3fccb0da/a/r/ar-3.jpg" alt="avatar" id="avatar">{{ publi.username }}</h2>
+                <div style="text-align: left">
+              </div>
+              </div>
+            
+     <div
+               class="card-body"  id="img"
+            >
             <img
+              
               class="card-img-top"
               :src="publi.audio"
               alt="Card image cap"
               id='img'
             />
-            <div
-              class="card-body"
-            >
-                <h2 id="card" style="text-align: center">{{ publi.username }}</h2>
-                <div style="text-align: center">
-                
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            
+           
+  <!-- </div> -->
+  </div>
+</div>
     </div>
+    </div>
+
     
 
 </template>
@@ -43,6 +82,7 @@ export default {
         id: null,
         username: null,
         audio: null,
+        users_id:null
       },
       filtro: "",
       publis: [],
@@ -58,41 +98,66 @@ export default {
         .get(this.$urlAPI + "/publis")
         .then((response) => (this.publis = response.data));
       this.filtro = "";  
-    }
-  }
+    },
+ 
+  inclui() {
+      axios
+        .post(this.$urlAPI + "/publis", this.publi)
+        .then((response) =>
+          alert(`Ok! Publicacao criada ${response.data.id}`)
+        );
+      this.publi = {}; 
+    },
+}
 }
 </script>
 
 <style scoped>
-#img{
-    align-self: center;
-    margin-top: 5px;
-    height: 250px;
-    width: 200px;
-    max-height: 250px;
-    min-height: 250px;
-    max-width: 200px;
-    min-width: 200px;
+
+#avatar{
+  border-radius: 20px !important;
+  width: 40px;
+  height: 40px;
+}
+
+img{
+  max-height: 500px;
+  max-width: 500px;
+}
+
+#cartao{
+  align-self: center;
+  align-items: center;
+  text-align: center;
+   /* border-right: 1px solid gray;
+  border-left: 1px solid gray; */
  
 }
-#card-body{
-    margin-top: 5px;
-    height: 500px;
-    width: 362px;
-    max-height: 500px;
-    min-height: 500px;
-    max-width: 362px;
-    min-width: 362px;
-}
+
 #title{
   margin-top: 0px;
     margin-left: 680px;
 }
-#card{
-  font-size: medium;
-}
+
 #itens{
   margin-left: 50px;
   margin-top: 5px;
+}
+#publicar{
+  max-width: 500px;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 4px solid #ad76dc;
+}
+
+#botao{
+ background-color: #ad76dc !important;
+  border: none !important;
+  color:white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 50px !important;
+  margin-top: 20px !important;
 }
 </style>
