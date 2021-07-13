@@ -1,4 +1,5 @@
 <template>
+<div id="all">
   <form class="form-signin mt-5">
     <div class="text-center mb-4">
         <img id="logo" src="logo maior.png" alt="Twitter" class="mx-3">
@@ -54,6 +55,7 @@
    Criar
     </button>
   </form>
+  </div>
 </template>
 
 <script>
@@ -79,7 +81,7 @@ export default {
             console.error(response.data.msg);
          
           }
-          if (response.data.erro == "false") {
+          else {
             this.$router.push("/login");
           }
         });
@@ -89,6 +91,11 @@ export default {
 </script>
 
 <style scoped>
+
+#all{
+  background-color: #d6d1dd;
+  margin-top: -50px;
+}
 
 #botao{
   background-color: #ad76dc;

@@ -3,7 +3,7 @@
   
 
     <form @submit.prevent="inclui">
-      <div class="row">
+      <div id= "tweetbox" class="row">
         <div class="col-sm-12">
           <div class="form-group">
             <label for="audio"></label>
@@ -77,9 +77,15 @@ export default {
 
 <style scoped>
 
+#tweetbox{
+  margin-top: 1000px;
+  margin-bottom: 1000px;
+}
+
 #titulo{
-    width: 1100px;
+    /* width: 1100px; */
     height: 200px;
+    align-self: center
 }
 #botao{
     background-color: #ad76dc !important;

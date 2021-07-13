@@ -1,4 +1,6 @@
+
 <template>
+ <div id="all">
  
 <form class="form-signin mt-5" @submit.prevent="logar">
   <div class="text-center mb-4">
@@ -22,6 +24,7 @@
 
   <button id="botao" class="btn btn-lg btn-secondary btn-block" type="submit">Entrar</button>
 </form>    
+</div>
 
 </template>
 
@@ -62,6 +65,11 @@ export default {
 #logo{
   margin-top: 50px;
   margin-bottom: 35px;
+}
+#all{
+  background-color: #d6d1dd;
+  margin-top: -50px;
+  
 }
 template {
   height: 100%;

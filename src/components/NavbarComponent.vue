@@ -18,7 +18,7 @@
       <b-navbar-nav class="ml-auto">
         
         <b-nav-form>
-           <!-- <button > <b-icon id="teste" icon="search"></b-icon></button> -->
+           <b-icon id="iconprocura" icon="search"></b-icon>
           <b-form-input id="botao" text-variant="light" size="sm" class="mr-sm-2" placeholder="Buscar no Twitter"></b-form-input>
         
         </b-nav-form>
@@ -59,8 +59,11 @@
 </script>
 
 <style scoped>
-#teste{
-  color: red;
+
+
+#iconprocura{
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
 }
 #botao{
  

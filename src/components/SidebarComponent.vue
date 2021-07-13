@@ -86,6 +86,14 @@ export default {
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+#nav:hover{
+  background-color:#011017;
+  border-radius: 30px;
+  color: #ad76dc;
+  transition: color 100ms ease-out;
+}
+
 #botao{
  background-color: #ad76dc !important;
   border: none !important;
